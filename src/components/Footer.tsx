@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6 text-center">
         {/* Brand */}
         <h3 className="heading-display text-xl font-semibold text-cream">
-          Al-Kabeer Jewelers
+          Al-Kabeer Jewellers
         </h3>
         <p className="font-elegant mt-2 text-sm text-cream/50">
           Pure Gold. Timeless Beauty.
@@ -21,7 +21,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <p className="font-elegant text-xs text-cream/40">
-          © {currentYear} Al-Kabeer Jewelers. All rights reserved.
+          © {currentYear} Al-Kabeer Jewellers. All rights reserved.
         </p>
         <p className="font-elegant mt-2 text-xs text-cream/30">
           Images shown are for illustration. Actual products may vary.

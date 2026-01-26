@@ -1,9 +1,35 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
+import { useScrollAnimation, getStaggerDelay } from "@/hooks/useScrollAnimation";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export const ContactSection = () => {
+  const { ref: sectionRef, animationClass } = useScrollAnimation<HTMLElement>();
+  const [cardsRef, cardsVisible] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+
+  const contactItems = [
+    {
+      icon: Phone,
+      title: "Call Us",
+      primary: "+XX XXX XXXXXXX",
+      secondary: "(Your number here)",
+    },
+    {
+      icon: MapPin,
+      title: "Visit Us",
+      primary: "Your Shop Address",
+      secondary: "City, Country",
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      primary: "Mon - Sat: 10AM - 9PM",
+      secondary: "Sunday: Closed",
+    },
+  ];
+
   return (
-    <section className="bg-charcoal py-16 md:py-24">
+    <section ref={sectionRef} className={`bg-charcoal py-16 md:py-24 ${animationClass}`}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -22,54 +48,31 @@ export const ContactSection = () => {
 
         {/* Contact Info */}
         <div className="mx-auto max-w-3xl">
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Phone */}
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
-                <Phone className="h-6 w-6 text-gold" />
+          <div ref={cardsRef} className="grid gap-8 md:grid-cols-3">
+            {contactItems.map((item, index) => (
+              <div 
+                key={item.title}
+                className={`text-center transition-all duration-500 ${
+                  cardsVisible 
+                    ? "opacity-100 translate-y-0" 
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: getStaggerDelay(index) }}
+              >
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
+                  <item.icon className="h-6 w-6 text-gold" />
+                </div>
+                <h3 className="heading-display text-lg font-medium text-cream">
+                  {item.title}
+                </h3>
+                <p className="font-elegant mt-2 text-cream/70">
+                  {item.primary}
+                </p>
+                <p className="font-elegant text-sm text-cream/50">
+                  {item.secondary}
+                </p>
               </div>
-              <h3 className="heading-display text-lg font-medium text-cream">
-                Call Us
-              </h3>
-              <p className="font-elegant mt-2 text-cream/70">
-                +XX XXX XXXXXXX
-              </p>
-              <p className="font-elegant text-sm text-cream/50">
-                (Your number here)
-              </p>
-            </div>
-
-            {/* Address */}
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
-                <MapPin className="h-6 w-6 text-gold" />
-              </div>
-              <h3 className="heading-display text-lg font-medium text-cream">
-                Visit Us
-              </h3>
-              <p className="font-elegant mt-2 text-cream/70">
-                Your Shop Address
-              </p>
-              <p className="font-elegant text-sm text-cream/50">
-                City, Country
-              </p>
-            </div>
-
-            {/* Hours */}
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
-                <Clock className="h-6 w-6 text-gold" />
-              </div>
-              <h3 className="heading-display text-lg font-medium text-cream">
-                Business Hours
-              </h3>
-              <p className="font-elegant mt-2 text-cream/70">
-                Mon - Sat: 10AM - 9PM
-              </p>
-              <p className="font-elegant text-sm text-cream/50">
-                Sunday: Closed
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* CTA */}
@@ -77,7 +80,7 @@ export const ContactSection = () => {
             <p className="font-elegant mb-6 text-lg text-cream/80">
               Have questions? We are happy to help!
             </p>
-            <WhatsAppButton message="Hello, I have a question about Al-Kabeer Jewelers." />
+            <WhatsAppButton message="Hello, I have a question about Al-Kabeer Jewellers." />
           </div>
         </div>
       </div>

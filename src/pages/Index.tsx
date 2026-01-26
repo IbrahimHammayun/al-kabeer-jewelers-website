@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { CollectionSection } from "@/components/CollectionSection";
@@ -9,6 +10,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <Header />
       <HeroSection />
       <AboutSection />
       <CollectionSection />
@@ -16,7 +18,7 @@ const Index = () => {
       <ContactSection />
       <Footer />
       
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button - Bottom Left */}
       <WhatsAppButton variant="floating" />
     </main>
   );
