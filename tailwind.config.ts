@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        elegant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        display: ['"Cinzel"', 'Georgia', 'serif'],
+        elegant: ['"Lora"', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",

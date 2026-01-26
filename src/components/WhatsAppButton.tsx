@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "XXXXXXXXXX"; // Replace with actual number
-const DEFAULT_MESSAGE = "Hello, I want to order jewelry from Al-Kabeer Jewelers.";
+const DEFAULT_MESSAGE = "Hello, I want to order jewellery from Al-Kabeer Jewellers.";
 
 interface WhatsAppButtonProps {
   message?: string;
@@ -24,7 +24,7 @@ export const WhatsAppButton = ({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-pulse-gold md:h-16 md:w-16 ${className}`}
+        className={`fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-pulse-gold md:h-16 md:w-16 ${className}`}
         aria-label="Contact us on WhatsApp"
       >
         <MessageCircle className="h-7 w-7 fill-current text-white md:h-8 md:w-8" />
@@ -38,7 +38,7 @@ export const WhatsAppButton = ({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center gap-2 rounded-sm border border-primary bg-transparent px-4 py-2 font-elegant text-sm font-medium tracking-wider text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground ${className}`}
+        className={`inline-flex items-center justify-center gap-2 rounded-xl border border-primary bg-transparent px-4 py-2 font-elegant text-sm font-medium tracking-wider text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground ${className}`}
       >
         <MessageCircle className="h-4 w-4" />
         {children || "Order on WhatsApp"}
@@ -51,7 +51,7 @@ export const WhatsAppButton = ({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-3 rounded-sm px-8 py-4 font-elegant text-base font-medium tracking-widest text-primary-foreground transition-all duration-300 gold-gradient hover:opacity-90 hover:shadow-lg md:text-lg ${className}`}
+      className={`inline-flex items-center justify-center gap-3 rounded-xl px-8 py-4 font-elegant text-base font-medium tracking-widest text-primary-foreground transition-all duration-300 gold-gradient hover:opacity-90 hover:shadow-lg md:text-lg ${className}`}
     >
       <MessageCircle className="h-5 w-5 md:h-6 md:w-6" />
       {children || "Order on WhatsApp"}

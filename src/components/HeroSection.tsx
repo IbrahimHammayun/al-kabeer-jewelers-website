@@ -8,25 +8,25 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxury gold jewelry"
-          className="h-full w-full object-cover"
+          alt="Luxury gold jewellery"
+          className="h-full w-full object-cover object-[center_30%] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/50 to-charcoal/90 md:from-charcoal/70 md:via-charcoal/50 md:to-charcoal/80" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-6 pt-16 text-center">
         {/* Brand Name */}
         <div className="fade-in mb-4">
           <span className="font-elegant text-sm tracking-[0.3em] text-gold-light md:text-base">
-            PREMIUM GOLD JEWELRY
+            PREMIUM GOLD JEWELLERY
           </span>
         </div>
         
         <h1 className="heading-display mb-6 text-4xl font-bold tracking-wide text-cream sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="gold-text-gradient">Al-Kabeer</span>
           <br />
-          <span className="text-cream">Jewelers</span>
+          <span className="text-cream">Jewellers</span>
         </h1>
 
         {/* Decorative Line */}
