@@ -1,11 +1,11 @@
 import ownerPortrait from "@/assets/owner-portrait.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 export const OwnerSection = () => {
-  const { ref, animationClass } = useScrollAnimation<HTMLElement>();
-
-  return (
-    <section ref={ref} className={`bg-cream-dark py-16 md:py-24 ${animationClass}`}>
+  const {
+    ref,
+    animationClass
+  } = useScrollAnimation<HTMLElement>();
+  return <section ref={ref} className={`bg-cream-dark py-16 md:py-24 ${animationClass}`}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -29,11 +29,7 @@ export const OwnerSection = () => {
             <div className="mb-6 flex-shrink-0 md:mb-0">
               <div className="relative">
                 <div className="absolute -inset-2 rounded-xl border border-gold/30" />
-                <img
-                  src={ownerPortrait}
-                  alt="Nabeel Maqbool - Owner of Al-Kabeer Jewellers"
-                  className="h-48 w-48 rounded-xl object-cover shadow-lg md:h-56 md:w-56"
-                />
+                <img src={ownerPortrait} alt="Nabeel Maqbool - Owner of Al-Kabeer Jewellers" className="h-48 w-48 rounded-xl object-cover shadow-lg md:h-56 md:w-56" />
               </div>
             </div>
 
@@ -45,9 +41,7 @@ export const OwnerSection = () => {
               <p className="font-elegant mt-1 text-gold">
                 Owner – Jadeed Al Kabeer Jewellers
               </p>
-              <p className="font-elegant mt-2 text-sm text-charcoal-light">
-                🕐 Available: 1st Saturday 9:30 AM
-              </p>
+              
               
               <div className="my-4 h-px w-16 bg-gold/30 md:mx-0 mx-auto" />
               
@@ -65,6 +59,5 @@ export const OwnerSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
