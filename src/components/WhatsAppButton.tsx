@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "923200498546";
-const DEFAULT_MESSAGE = "Hello, I want to order jewellery from Jadeed Al Kabeer Jewellers.";
+const WHATSAPP_NUMBER = "923200498546"; // Pakistan: +92 320 0498546
+const DEFAULT_MESSAGE = "Hello, I'm interested in ordering jewellery from Jadeed Al Kabeer Jewellers.";
 
 interface WhatsAppButtonProps {
   message?: string;
