@@ -4,19 +4,14 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 // Import all product images
-import goldRing from "@/assets/gold-ring.jpg";
-import goldNecklace from "@/assets/gold-necklace.jpg";
-import goldBangles from "@/assets/gold-bangles.jpg";
-import bridalJewelry from "@/assets/bridal-jewelry.jpg";
-import necklace1 from "@/assets/necklace-1.jpg";
-import necklace2 from "@/assets/necklace-2.jpg";
-import bangles1 from "@/assets/bangles-1.jpg";
-import bangles2 from "@/assets/bangles-2.jpg";
-import bridal1 from "@/assets/bridal-1.jpg";
-import bridal2 from "@/assets/bridal-2.jpg";
-import ringLadies1 from "@/assets/ring-ladies-1.jpg";
-import ringGents1 from "@/assets/ring-gents-1.jpg";
-import ringChildren1 from "@/assets/ring-children-1.jpg";
+import necklaceOpalSet from "@/assets/necklace-opal-set.jpg";
+import necklaceHeartSet from "@/assets/necklace-heart-set.jpg";
+import necklaceEmeraldSet from "@/assets/necklace-emerald-set.jpg";
+import braceletsGoldBox from "@/assets/bracelets-gold-box.jpg";
+import bangleWideGold from "@/assets/bangle-wide-gold.jpg";
+import bridalHandChain from "@/assets/bridal-hand-chain.jpg";
+import ringRuby from "@/assets/ring-ruby.jpg";
+import ringMarquise from "@/assets/ring-marquise.jpg";
 
 type Category = "necklaces" | "bangles" | "bridal" | "rings";
 type RingFilter = "all" | "ladies" | "gents" | "children";
@@ -32,29 +27,21 @@ interface Product {
 
 const products: Product[] = [
   // Necklaces
-  { id: 1, name: "Classic Pendant", description: "Elegant gold pendant necklace", image: necklace1, category: "necklaces" },
-  { id: 2, name: "Royal Choker", description: "Traditional bridal choker", image: necklace2, category: "necklaces" },
-  { id: 3, name: "Layered Chain", description: "Modern layered gold chain", image: goldNecklace, category: "necklaces" },
+  { id: 1, name: "Opal Pendant Set", description: "Gold necklace with opal stones", image: necklaceOpalSet, category: "necklaces" },
+  { id: 2, name: "Heart Design Set", description: "Romantic heart necklace with earrings", image: necklaceHeartSet, category: "necklaces" },
+  { id: 3, name: "Emerald Drop Set", description: "Elegant emerald pendant set", image: necklaceEmeraldSet, category: "necklaces" },
   
   // Bangles
-  { id: 4, name: "Traditional Set", description: "Classic gold bangle set", image: bangles1, category: "bangles" },
-  { id: 5, name: "Diamond Accent", description: "Modern bangles with stones", image: bangles2, category: "bangles" },
-  { id: 6, name: "Daily Wear", description: "Simple elegant bangles", image: goldBangles, category: "bangles" },
+  { id: 4, name: "Designer Bracelets", description: "Premium gold bracelet collection", image: braceletsGoldBox, category: "bangles" },
+  { id: 5, name: "Wide Gold Bangle", description: "Traditional carved bangle", image: bangleWideGold, category: "bangles" },
   
   // Bridal Sets
-  { id: 7, name: "Royal Bridal Set", description: "Complete wedding jewellery", image: bridal1, category: "bridal" },
-  { id: 8, name: "Ruby Collection", description: "Gold with red gemstones", image: bridal2, category: "bridal" },
-  { id: 9, name: "Traditional Set", description: "Classic bridal collection", image: bridalJewelry, category: "bridal" },
+  { id: 6, name: "Bridal Hand Chain", description: "Complete hand jewellery set", image: bridalHandChain, category: "bridal" },
+  { id: 7, name: "Emerald Bridal Set", description: "Necklace set with emeralds", image: necklaceEmeraldSet, category: "bridal" },
   
   // Rings - Ladies
-  { id: 10, name: "Diamond Solitaire", description: "Elegant engagement ring", image: ringLadies1, category: "rings", ringType: "ladies" },
-  { id: 11, name: "Floral Design", description: "Delicate flower pattern", image: goldRing, category: "rings", ringType: "ladies" },
-  
-  // Rings - Gents
-  { id: 12, name: "Bold Classic", description: "Strong masculine design", image: ringGents1, category: "rings", ringType: "gents" },
-  
-  // Rings - Children
-  { id: 13, name: "Tiny Star", description: "Small cute ring for kids", image: ringChildren1, category: "rings", ringType: "children" },
+  { id: 8, name: "Ruby Statement Ring", description: "Luxurious ruby gold ring", image: ringRuby, category: "rings", ringType: "ladies" },
+  { id: 9, name: "Marquise Diamond Ring", description: "Elegant vintage style ring", image: ringMarquise, category: "rings", ringType: "ladies" },
 ];
 
 const categories: { id: Category; label: string }[] = [

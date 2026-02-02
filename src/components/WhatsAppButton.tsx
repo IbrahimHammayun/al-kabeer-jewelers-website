@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "XXXXXXXXXX"; // Replace with actual number
-const DEFAULT_MESSAGE = "Hello, I want to order jewellery from Al-Kabeer Jewellers.";
+const WHATSAPP_NUMBER = "923200498546";
+const DEFAULT_MESSAGE = "Hello, I want to order jewellery from Jadeed Al Kabeer Jewellers.";
 
 interface WhatsAppButtonProps {
   message?: string;

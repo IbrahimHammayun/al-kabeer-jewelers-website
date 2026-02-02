@@ -11,20 +11,20 @@ export const ContactSection = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "+XX XXX XXXXXXX",
-      secondary: "(Your number here)",
+      primary: "0320-0498546",
+      secondary: "WhatsApp Available",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      primary: "Your Shop Address",
-      secondary: "City, Country",
+      primary: "New Shad Bagh, Shop No. 4",
+      secondary: "Near Qum Qum Cosmetic, Market Shad Bagh Center",
     },
     {
       icon: Clock,
       title: "Business Hours",
       primary: "Mon - Sat: 10AM - 9PM",
-      secondary: "Sunday: Closed",
+      secondary: "Owner: 1st Saturday 9:30 AM",
     },
   ];
 

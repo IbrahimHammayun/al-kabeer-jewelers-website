@@ -43,14 +43,17 @@ export const OwnerSection = () => {
                 Nabeel Maqbool
               </h3>
               <p className="font-elegant mt-1 text-gold">
-                Owner – Al-Kabeer Jewellers
+                Owner – Jadeed Al Kabeer Jewellers
+              </p>
+              <p className="font-elegant mt-2 text-sm text-charcoal-light">
+                🕐 Available: 1st Saturday 9:30 AM
               </p>
               
               <div className="my-4 h-px w-16 bg-gold/30 md:mx-0 mx-auto" />
               
               <p className="font-elegant text-lg leading-relaxed text-charcoal-light">
                 With a passion for fine jewellery and a commitment to customer satisfaction, 
-                Mr. Nabeel Maqbool has built Al-Kabeer Jewellers into a trusted destination 
+                Mr. Nabeel Maqbool has built Jadeed Al Kabeer Jewellers into a trusted destination 
                 for premium gold jewellery. His vision is simple: provide the best quality 
                 gold jewellery with honest service.
               </p>
