@@ -23,8 +23,8 @@ export const HeroSection = () => {
           </span>
         </div>
         
-        <h1 className="heading-display mb-6 text-4xl font-bold tracking-wide text-cream sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="gold-text-gradient">Al-Kabeer</span>
+        <h1 className="heading-display mb-6 text-3xl font-bold tracking-wide text-cream sm:text-4xl md:text-5xl lg:text-6xl">
+          <span className="gold-text-gradient">Jadeed Al Kabeer</span>
           <br />
           <span className="text-cream">Jewellers</span>
         </h1>

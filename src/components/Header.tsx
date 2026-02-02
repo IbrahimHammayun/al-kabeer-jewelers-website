@@ -25,11 +25,11 @@ export const Header = () => {
           {/* Centered Logo */}
           <a href="#" className="flex flex-col items-center">
             <h1
-              className={`font-display text-xl font-semibold tracking-[0.15em] transition-colors duration-300 md:text-2xl ${
+              className={`font-display text-lg font-semibold tracking-[0.1em] transition-colors duration-300 md:text-xl ${
                 isScrolled ? "text-foreground" : "text-cream"
               }`}
             >
-              <span className="gold-text-gradient">AL-KABEER</span>
+              <span className="gold-text-gradient">JADEED AL KABEER</span>
             </h1>
             <span
               className={`font-elegant text-[10px] tracking-[0.3em] transition-colors duration-300 md:text-xs ${
